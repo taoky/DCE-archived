@@ -1,0 +1,74 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Nov 17 10:42:48 2018
+| Host         : tao-linux-vmware running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file lab8_2_1_control_sets_placed.rpt
+| Design       : lab8_2_1
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    24 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            4 |
+|      8 |            2 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            4 |
+| No           | No                    | Yes                    |              64 |            8 |
+| No           | Yes                   | No                     |              72 |            9 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               8 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+--------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+
+|          Clock Signal         |                                  Enable Signal                                 |                                    Set/Reset Signal                                   | Slice Load Count | Bel Load Count |
++-------------------------------+--------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+
+|  nolabel_line20/inst/clk_out1 |                                                                                |                                                                                       |                1 |              2 |
+|  nolabel_line23/CD/Clk500Hz   |                                                                                |                                                                                       |                1 |              2 |
+|  clock_BUFG                   |                                                                                |                                                                                       |                1 |              2 |
+|  nolabel_line21/clk           |                                                                                |                                                                                       |                1 |              2 |
+|  nolabel_line21/clk           |                                                                                | nolabel_line22/nolabel_line11/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
+|  nolabel_line21/clk           | nolabel_line22/nolabel_line11/U0/i_synth/i_baseblox.i_baseblox_counter/THRESH0 | nolabel_line22/nolabel_line12/U0/i_synth/i_baseblox.i_baseblox_counter/clear_count__0 |                1 |              8 |
+|  nolabel_line20/inst/clk_out1 |                                                                                | nolabel_line23/CD/clear                                                               |                8 |             64 |
+|  clock_BUFG                   |                                                                                | reset_IBUF                                                                            |                8 |             64 |
++-------------------------------+--------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------+----------------+
+
+

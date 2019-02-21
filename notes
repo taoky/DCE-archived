@@ -1,0 +1,2 @@
+xc7a100tcsg324-1
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets { Clk }];

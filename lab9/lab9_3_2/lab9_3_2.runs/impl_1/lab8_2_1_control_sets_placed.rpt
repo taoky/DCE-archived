@@ -1,0 +1,81 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Nov 18 23:29:00 2018
+| Host         : tao-linux-vmware running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file lab8_2_1_control_sets_placed.rpt
+| Design       : lab8_2_1
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    48 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            6 |
+|      4 |            3 |
+|      8 |            3 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            3 |
+| No           | No                    | Yes                    |               4 |            2 |
+| No           | Yes                   | No                     |             132 |           18 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              32 |            7 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------------+--------------------------------------------+----------------------------------------------------+------------------+----------------+
+|                     Clock Signal                    |                Enable Signal               |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++-----------------------------------------------------+--------------------------------------------+----------------------------------------------------+------------------+----------------+
+|  nolabel_line18/nolabel_line18/v_reg[0]_LDC_i_1_n_0 |                                            | nolabel_line18/nolabel_line18/v_reg[0]_LDC_i_2_n_0 |                1 |              2 |
+|  nolabel_line18/nolabel_line18/v_reg[1]_LDC_i_1_n_0 |                                            | nolabel_line18/nolabel_line18/v_reg[1]_LDC_i_2_n_0 |                1 |              2 |
+|  nolabel_line17/Clk1Hz                              |                                            | nolabel_line18/nolabel_line18/v_reg[0]_LDC_i_2_n_0 |                1 |              2 |
+|  nolabel_line17/Clk1Hz                              |                                            | nolabel_line18/nolabel_line18/v_reg[1]_LDC_i_2_n_0 |                1 |              2 |
+|  nolabel_line17/Clk1Hz                              | nolabel_line18/nolabel_line18/enable02_out | nolabel_line18/nolabel_line18/v_reg[0]_LDC_i_1_n_0 |                1 |              2 |
+|  nolabel_line17/Clk1Hz                              | nolabel_line18/nolabel_line18/enable02_out | nolabel_line18/nolabel_line18/v_reg[1]_LDC_i_1_n_0 |                1 |              2 |
+|  nolabel_line19/CD/CLK                              |                                            |                                                    |                1 |              4 |
+|  nolabel_line17/Clk1Hz                              | nolabel_line18/nolabel_line18/enable02_out | reset_IBUF                                         |                1 |              4 |
+|  nolabel_line16/inst/clk_out1                       |                                            |                                                    |                2 |              4 |
+|  nolabel_line17/Clk1Hz                              | nolabel_line18/nolabel_line16/v_reg[0]_1   | reset_IBUF                                         |                2 |              8 |
+|  nolabel_line17/Clk1Hz                              | nolabel_line18/nolabel_line18/enable0      | reset_IBUF                                         |                1 |              8 |
+|  nolabel_line17/Clk1Hz                              | nolabel_line18/nolabel_line18/new_en       | reset_IBUF                                         |                1 |              8 |
+|  nolabel_line16/inst/clk_out1                       |                                            | nolabel_line19/CD/n1_carry__2_n_4                  |                8 |             64 |
+|  nolabel_line16/inst/clk_out1                       |                                            | nolabel_line17/clear                               |                8 |             64 |
++-----------------------------------------------------+--------------------------------------------+----------------------------------------------------+------------------+----------------+
+
+

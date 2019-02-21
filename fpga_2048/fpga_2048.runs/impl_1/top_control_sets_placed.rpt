@@ -1,0 +1,113 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Dec 18 17:55:10 2018
+| Host         : tao-linux-vmware running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    47 |
+| Unused register locations in slices containing registers |   150 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            5 |
+|      4 |            8 |
+|    16+ |           34 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             340 |           53 |
+| No           | No                    | Yes                    |             642 |          139 |
+| No           | Yes                   | No                     |             544 |           88 |
+| Yes          | No                    | No                     |            1648 |          249 |
+| Yes          | No                    | Yes                    |           12924 |         1167 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-------------------------+---------------------------+------------------+----------------+
+|          Clock Signal         |      Enable Signal      |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++-------------------------------+-------------------------+---------------------------+------------------+----------------+
+|  MF/DB2/out_reg_i_1__0_n_3    |                         | MF/DB2/out_reg_i_2__0_n_3 |                1 |              2 |
+|  MF/DB3/out_reg_i_1__1_n_3    |                         | MF/DB3/out_reg_i_2__1_n_3 |                1 |              2 |
+|  MF/DB4/out_reg_i_1__2_n_3    |                         | MF/DB4/out_reg_i_2__2_n_3 |                1 |              2 |
+|  MF/DB1/out_reg_i_1_n_3       |                         | MF/DB1/out_reg_i_2_n_3    |                1 |              2 |
+|  n_2_7819_BUFG                |                         | n_1_7818_BUFG             |                1 |              2 |
+|  clk2                         |                         |                           |                2 |              4 |
+|  wt_reg_i_3__0_n_3            |                         |                           |                1 |              4 |
+|  clk3                         |                         |                           |                2 |              4 |
+|  wt_reg_i_3_n_3               |                         |                           |                1 |              4 |
+|  wt_reg_i_3__1_n_3            |                         |                           |                1 |              4 |
+|  clk5                         |                         |                           |                2 |              4 |
+|  wt_reg_i_3__2_n_3            |                         |                           |                1 |              4 |
+|  n_0_4679_BUFG                |                         |                           |                2 |              4 |
+|  wt_reg_i_3__0_n_3            |                         | reset_IBUF                |                3 |             16 |
+|  wt_reg_i_3__1_n_3            |                         | reset_IBUF                |                3 |             16 |
+|  wt_reg_i_3__2_n_3            |                         | reset_IBUF                |                4 |             16 |
+|  wt_reg_i_3_n_3               |                         | reset_IBUF                |                3 |             16 |
+|  wt_reg_i_3__1_n_3            | MUS/M1/wt               | reset_IBUF                |                3 |             18 |
+|  wt_reg_i_3__2_n_3            | MUS/M2/wt               | reset_IBUF                |                5 |             18 |
+|  wt_reg_i_3_n_3               | MUS/M3/wt               | reset_IBUF                |                2 |             18 |
+|  wt_reg_i_3__0_n_3            | MUS/M5/wt               | reset_IBUF                |                3 |             18 |
+|  VM/VGA/hc/E[0]               |                         |                           |                4 |             20 |
+|  counter[10]                  | MF/DB1/board_reg[10][3] | reset_IBUF                |               10 |             20 |
+|  n_1_7818_BUFG                |                         | n_2_7819_BUFG             |               11 |             22 |
+| ~VM/VGA/hc/value_reg[0]_0     |                         | reset_IBUF                |                4 |             32 |
+|  counter[10]                  |                         | n_2_7819_BUFG             |               22 |             50 |
+|  counter[10]                  |                         | n_1_7818_BUFG             |               21 |             50 |
+|  VM/VGA/clk25c/value_reg[0]_0 |                         | reset_IBUF                |               11 |             60 |
+|  clk3                         |                         | reset_IBUF                |                8 |             64 |
+|  clk2                         |                         | reset_IBUF                |                8 |             64 |
+|  clk2                         |                         | MUS/M2/w/clear            |                8 |             64 |
+|  clk3                         |                         | MUS/M3/w/clear            |                8 |             64 |
+|  clk5                         |                         | reset_IBUF                |                8 |             64 |
+|  clk5                         |                         | MUS/M5/w/clear            |                8 |             64 |
+|  n_0_4679_BUFG                |                         | reset_IBUF                |                8 |             64 |
+|  n_0_4679_BUFG                |                         | MUS/M1/w/clear            |                8 |             64 |
+|  CLKIP/inst/clk_out1          |                         | reset_IBUF                |                8 |             64 |
+|  counter[15]                  |                         |                           |               37 |            288 |
+|  counter[10]                  |                         | reset_IBUF                |               68 |            322 |
+|  wt_reg_i_3__2_n_3            | MUS/M2/music            |                           |               64 |            426 |
+|  wt_reg_i_3__1_n_3            | MUS/M1/music            |                           |              113 |            830 |
+|  wt_reg_i_3__0_n_3            | MUS/M5/music            |                           |              146 |           1024 |
+|  wt_reg_i_3_n_3               | MUS/M3/music            |                           |              201 |           1460 |
+|  wt_reg_i_3__2_n_3            | MUS/M2/music            | reset_IBUF                |              141 |           1514 |
+|  wt_reg_i_3__1_n_3            | MUS/M1/music            | reset_IBUF                |              224 |           2638 |
+|  wt_reg_i_3__0_n_3            | MUS/M5/music            | reset_IBUF                |              383 |           4270 |
+|  wt_reg_i_3_n_3               | MUS/M3/music            | reset_IBUF                |              396 |           4410 |
++-------------------------------+-------------------------+---------------------------+------------------+----------------+
+
+
